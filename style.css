@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
+/* Reset - Inicio */
+
 html,
 body {
   height: 100vh;
@@ -10,10 +12,17 @@ body {
 
 * {
     box-sizing: border-box;
+    border: 0;
     margin: 0;
     padding: 0;
     outline: 0;
 }
+
+/* Reset - Fim */
+
+
+
+/* Header - Inicio */
 
 header {
     background-color: #7159c1;
@@ -49,3 +58,122 @@ header nav ul a {
 header nav ul li a:hover {
     background: rgba(255,255,255, 0.15)
 }
+
+/* Header - Fim */
+
+
+
+/* Section Hero - Inicio */
+
+.hero {
+    display: flex;
+    gap: .5rem;
+    margin: 80px 200px;
+}
+
+.hero div {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero div h2 {
+    color: rgb(75, 75, 75);
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.hero div p {
+    color: rgb(154, 142, 191);
+    font-size: 18px;
+    line-height: 32px;
+    margin: 10px 0px 0px;
+}
+
+.hero div button {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(113, 89, 193);
+    margin: 15px 0px 0px;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 150ms linear 0s;
+}
+    
+.hero div button:hover {
+    opacity: 0.9;
+}
+
+/* Section Hero - Fim */
+
+
+
+/* Main - Inicio */
+
+main {
+    margin-bottom: 80px;
+}
+
+section.cards {
+    width: 980px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 310px 310px 310px;
+    grid-gap: 20px;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #7159c1;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+div.image {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+
+    overflow: hidden;
+    position: relative;
+}
+
+div.image img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    margin: 20px;
+}
+
+.text--medium {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+p.title {
+    margin-bottom: 20px;
+}
+
+div.info {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    margin-left: auto;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #7159c1;
+    filter: brightness(90%);
+}
+
+/* Main - Fim */
